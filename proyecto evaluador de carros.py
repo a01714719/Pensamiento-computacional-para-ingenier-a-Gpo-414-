@@ -3,6 +3,10 @@ while True:
     #aca defino las variables que vamos a utilizar para evaluar el carro
     kilometraje = int(input("Ingresa el kilometraje del carro que quieres comprar: "))
     año = int(input("Ingresa el año del carro que quieres comprar: "))
+    while año < 1926 or año >2026:
+        print("error, es imposible que el carro tenga esa edad")
+        año = int(input("Ingresa el año del carro que quieres comprar: "))
+
     choques = int(input("cuantos antecedentes de choques?: "))
     puntaje=0
     #aca evaluamos el kilometraje
@@ -32,7 +36,7 @@ while True:
 
     # Resultado final
     if puntaje == 3:
-    print("Este carro es recomendable")
+        print("Este carro es recomendable")
     if puntaje == 2:
         print("Puede ser aceptable, revisa los detalles")
     else:
@@ -40,5 +44,5 @@ while True:
 
     repetir = input("¿Quieres evaluar otro carro? (si/no): ")
     if repetir == "no":
-            print("Gracias por usar el evaluador de carros 🚘")
-    break
+            print("Gracias por usar el evaluador de carros ")
+            break
