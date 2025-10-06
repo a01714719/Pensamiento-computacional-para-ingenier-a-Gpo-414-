@@ -1,10 +1,15 @@
+modelos = ["toyota", "mazda", "chevrolet", "nissan", "ford"]
 while True:
     print("Vamos a evaluar el carro que vas a comprar carro")
+    modelo=input("Ingresa el modelo del carro que quieres comprar: ")
+    while modelo not in modelos:
+        print("Modelo no válido. Modelos disponibles:", modelos)
+        modelo = input("Ingresa nuevamente el modelo del carro: ")
     #aca defino las variables que vamos a utilizar para evaluar el carro
     kilometraje = int(input("Ingresa el kilometraje del carro que quieres comprar: "))
     año = int(input("Ingresa el año del carro que quieres comprar: "))
     while año < 1926 or año >2026:
-        print("error, es imposible que el carro tenga esa edad")
+        print("Error, es imposible que el carro tenga esa edad")
         año = int(input("Ingresa el año del carro que quieres comprar: "))
 
     choques = int(input("cuantos antecedentes de choques?: "))
