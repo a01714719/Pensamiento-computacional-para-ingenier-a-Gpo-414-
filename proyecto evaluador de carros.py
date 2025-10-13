@@ -1,4 +1,5 @@
 modelos = ["toyota", "mazda", "chevrolet", "nissan", "ford"]
+carros_evaluados = []
 while True:
     print("Vamos a evaluar el carro que vas a comprar carro")
     modelo=input("Ingresa el modelo del carro que quieres comprar: ")
@@ -46,8 +47,13 @@ while True:
         print("Puede ser aceptable, revisa los detalles")
     else:
         print("No recomendamos comprar este carro ")
-
+    
+    carros_evaluados.append([modelo, año, kilometraje, choques, puntaje])
     repetir = input("¿Quieres evaluar otro carro? (si/no): ")
     if repetir == "no":
-            print("Gracias por usar el evaluador de carros ")
-            break
+        print("Gracias por usar el evaluador de carros ")
+        print("\nResumen de carros evaluados:")
+        print("Modelo  Año  Kilometraje  Choques  Puntaje")
+        for carro in carros_evaluados:
+            print(carro)
+        break
